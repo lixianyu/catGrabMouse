@@ -1,7 +1,7 @@
 #输入步进数，得到最后一轮被吃掉的老鼠的编号，以及第三轮被吃掉的老鼠的编号
 #一共有13只老鼠围成一个圆圈。
 
-magicNum = 13 #有13只老鼠，编号为1的老鼠的颜色为白色，其它为黑色
+magicNum = 13#步进数
 gn = 1
 gtheThirdEatMouse = 0
 def eatThirteenthMouse1(idx, mouses):
@@ -29,7 +29,7 @@ def eatThirteenthMouse1(idx, mouses):
 
 print('请输入老鼠个数：')
 # mouseCount = int(input())
-mouseCount = 13
+mouseCount = 13 #有13只老鼠，编号为1的老鼠的颜色为白色，其它为黑色
 mouseList = list(range(1, mouseCount + 1))
 print(mouseList)
 print('一共有', mouseCount, '只老鼠')
