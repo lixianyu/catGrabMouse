@@ -60,10 +60,12 @@ for step in range(magicNum, maxStep + 1):
     mouseList = list(range(1, mouseCount + 1))
 
 print('theAllTarget = ', theAllTarget, '  长度为：', len(theAllTarget))
-# minusList = []
-# for i in range(1, len(theAllTarget)):
-#     minusList.append(theAllTarget[i] - theAllTarget[i-1])
-# print('minusList = ', minusList)
+
+# 两个相邻步进数相减，看看是否有规律
+minusList = []
+for i in range(1, len(theAllTarget)):
+    minusList.append(theAllTarget[i] - theAllTarget[i-1])
+print('minusList = ', minusList)
 
 modList13 = [13 if x % 13 == 0 else x % 13 for x in theAllTarget]
 modList12 = [12 if x % 12 == 0 else x % 12 for x in theAllTarget]
@@ -71,6 +73,8 @@ modList11 = [11 if x % 11 == 0 else x % 11 for x in theAllTarget]
 modList10 = [10 if x % 10 == 0 else x % 10 for x in theAllTarget]
 
 # 余数相加
+
+add1312 = [x + y for x,y in zip(modList13, modList12)]
 add131211 = [x + y + z for x,y,z in zip(modList13, modList12, modList11)]
 # for i, j, k, m in zip(modList13,modList12,modList11,modList10):
 #     summ = i + j + k + m
@@ -88,6 +92,7 @@ print('\nmodList13 = ', modList13)
 print('modList12 = ', modList12)
 print('modList11 = ', modList11)
 print('modList10 = ', modList10)
+print('add1312 = ', add1312)
 print('\nadd131211 = ', add131211)
 # print('modIsFifteenOrOne = ' , modIsFifteenOrOne)
 print('Done!')
